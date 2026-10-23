@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Excellence Dot Net — broadband internet service in Hathazari, Chittagong, from Quaish to Madunaghat.">
+  <meta name="theme-color" content="#07140a">
+  <title>Excellence — Fast Internet. A Better Tomorrow.</title>
+  <style>
+    :root{--ink:#101712;--green:#14d000;--mint:#55bd8b;--paper:#f6f7f3;--line:#dce2dc;--muted:#657067;--dark:#07140a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper)}
+    a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+    .mono,.eyebrow,.nav a,.plan-speed,.tag{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.04em}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,20,10,.97);color:#fff;border-bottom:1px solid #243329}
+    .navwrap{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:27px;letter-spacing:-1.3px}.brand img{width:44px;height:44px;object-fit:contain;border-radius:9px;background:#fff}.brand .dot{color:var(--green)}
+    nav{display:flex;gap:23px;font-size:12px;text-transform:uppercase}.nav a:hover{color:var(--green)}
+    .nav-cta{padding:10px 15px;border:1px solid #718076;border-radius:30px;font-size:12px;white-space:nowrap}
+    .hero{min-height:410px;color:white;background:linear-gradient(90deg,rgba(5,15,10,.95),rgba(5,15,10,.65) 48%,rgba(5,15,10,.18)),radial-gradient(ellipse at 75% 55%,#51775c 0%,#233f32 36%,#12231a 72%);position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(90deg,transparent,#000)}
+    .hero-inner{position:relative;z-index:1;max-width:1180px;margin:auto;padding:76px 22px 65px}
+    .eyebrow{font-size:11px;text-transform:uppercase;display:flex;align-items:center;gap:9px}.sq{display:inline-block;width:8px;height:8px;background:var(--green)}
+    h1{font-size:clamp(48px,8vw,88px);line-height:.95;letter-spacing:-.065em;margin:19px 0 13px;font-weight:850}.hero h1 span{color:var(--green)}
+    .tagline{font-family:ui-monospace,monospace;text-transform:uppercase;letter-spacing:.16em;font-size:14px;color:#e2e9e2}
+    .hero p{max-width:460px;line-height:1.65;color:#e1e7e1;font-size:16px}.btn{display:inline-flex;align-items:center;gap:12px;background:var(--green);color:#061006;padding:13px 18px;font-weight:800;font-size:13px;border:0;cursor:pointer}.btn:hover{filter:brightness(.9)}.btn-dark{background:#101712;color:#fff}
+    .coverage-badge{position:absolute;right:22px;top:45px;z-index:2;border:1px solid #829084;background:rgba(8,20,13,.76);padding:17px 20px;min-width:230px}.coverage-badge strong{display:block;margin-top:9px;font-size:14px}.coverage-badge small{color:#bdc9be}
+    section{max-width:1180px;margin:auto;padding:58px 22px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:26px}.sectionhead h2{font-size:clamp(27px,4vw,40px);line-height:1.05;letter-spacing:-.04em;margin:12px 0 0}.sectionhead p{max-width:370px;color:var(--muted);font-size:14px;line-height:1.6}
+    .plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.plan{border:1px solid var(--line);padding:22px 19px 18px;background:#fff;position:relative;min-width:0}.plan.featured{border-color:#8dc8a2;box-shadow:inset 0 3px var(--green)}.block{width:25px;height:25px;background:var(--green);margin-bottom:18px;position:relative}.block:before,.block:after{content:"";position:absolute;width:8px;height:8px;background:#7af36d;top:-5px;border-radius:50%}.block:before{left:3px}.block:after{right:3px}.plan h3{margin:0 0 8px;font-size:17px}.plan-speed{font-size:23px;font-weight:800;letter-spacing:-.04em}.price{font-size:22px;font-weight:800;margin:13px 0 17px}.price small{font-size:12px;font-weight:400;color:var(--muted)}.features{border-top:1px solid #e8ece8;padding-top:13px;color:#59635b;font-size:12px;line-height:2}.features span{color:#148e1b;margin-right:7px}.plan .btn{margin-top:15px;width:100%;justify-content:center;padding:11px 8px;font-size:12px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{padding:27px;background:#fff;border:1px solid var(--line)}.panel.dark{background:var(--dark);color:#fff;border-color:var(--dark)}.panel h2{font-size:31px;letter-spacing:-.04em;margin:13px 0}.panel p{font-size:14px;line-height:1.65;color:var(--muted);max-width:430px}.panel.dark p{color:#c6d1c8}
+    .route{margin-top:22px;padding:18px;border:1px solid #3a5141;display:flex;align-items:center;gap:14px;font-family:ui-monospace,monospace;font-size:12px}.route-line{height:2px;flex:1;background:var(--green);position:relative}.route-line:after{content:"";position:absolute;right:0;top:-4px;width:10px;height:10px;background:var(--green);border-radius:50%}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);background:#fbfcfa;border-radius:2px;font-size:13px}textarea{grid-column:1/-1;min-height:75px;resize:vertical}form .full{grid-column:1/-1}form .btn{width:100%;justify-content:center}
+    .notice{font-size:11px!important;color:#7b857d!important;margin-top:9px}
+    .why{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:15px;align-items:center}.whyitem{border-left:1px solid var(--line);padding:10px 15px;font-size:13px}.whyitem b{display:block;margin-bottom:5px}.whyitem span{color:var(--muted);font-size:12px}
+    footer{background:#07140a;color:#fff;padding:34px 22px 18px}.footerinner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:25px}.footerinner p,.footerinner a{color:#b9c7bc;font-size:12px;line-height:1.9}.footerinner h4{font-family:ui-monospace,monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.footbrand{font-size:28px;font-weight:800;letter-spacing:-1px}.copyright{max-width:1180px;margin:24px auto 0;padding-top:14px;border-top:1px solid #23352a;color:#8d9c90;font-size:11px;display:flex;justify-content:space-between;gap:15px}
+    .lang{font-size:11px;color:#c6d1c8}.lang button{background:none;color:inherit;border:0;cursor:pointer;padding:4px}.lang button.active{color:var(--green)}
+    @media(max-width:900px){nav{display:none}.plans{grid-template-columns:repeat(2,1fr)}.coverage-badge{right:18px;top:18px;min-width:0;padding:12px}.hero-inner{padding-top:130px}.why{grid-template-columns:1fr 1fr}.why>div:first-child{grid-column:1/-1}.footerinner{grid-template-columns:1fr 1fr}}
+    @media(max-width:580px){.navwrap{padding:10px 15px}.brand{font-size:23px}.brand img{width:36px;height:36px}.nav-cta{padding:9px 10px;font-size:11px}.hero-inner{padding:125px 18px 52px}.hero p{font-size:14px}.coverage-badge{left:18px;right:auto;top:16px}.sectionhead{display:block}.sectionhead p{margin-top:12px}.plans,.split{grid-template-columns:1fr}section{padding:43px 16px}.panel{padding:22px}.why{grid-template-columns:1fr}.why>div:first-child{grid-column:auto}.whyitem{border-left:2px solid var(--green)}.footerinner{grid-template-columns:1fr 1fr;gap:15px}.footerinner>div:first-child{grid-column:1/-1}.copyright{display:block;line-height:1.8}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="navwrap">
+    <a class="brand" href="#home" aria-label="Excellence home">
+      <img src="logo-original.jpeg" alt="Excellence logo">
+      <span>Excellence<span class="dot">.</span></span>
+    </a>
+    <nav class="nav">
+      <a href="#home">Home</a><a href="#packages">Packages</a><a href="#coverage">Coverage</a><a href="#connect">New connection</a><a href="#support">Support</a>
+    </nav>
+    <a class="nav-cta" id="whatsappTop" href="#connect">◉ WhatsApp us ↗</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero" id="home">
+    <div class="coverage-badge"><div class="eyebrow"><i class="sq"></i> Coverage area</div><strong>Quaish → Madunaghat</strong><small>Hathazari, Chittagong</small></div>
+    <div class="hero-inner">
+      <div class="eyebrow"><i class="sq"></i> Internet service provider</div>
+      <h1>Excellence<span>.</span></h1>
+      <div class="tagline">Fast <span style="color:var(--green)">·</span> Stable <span style="color:var(--green)">·</span> Local</div>
+      <p>Reliable broadband for your home and business in Hathazari, Chittagong. Check our packages and request a new connection.</p>
+      <a class="btn" href="#packages">Explore packages <span>→</span></a>
+    </div>
+  </div>
+
+  <section id="packages">
+    <div class="sectionhead">
+      <div><div class="eyebrow"><i class="sq"></i> Our internet packages</div><h2>Choose the speed<br>that fits your life.</h2></div>
+      <p>Clear packages. Local support. A connection that keeps you moving. Contact us to confirm availability and current offers.</p>
+    </div>
+    <div class="plans">
+      <article class="plan"><div class="block"></div><h3>Starter</h3><div class="plan-speed">15 Mbps</div><div class="price">৳ 500 <small>/month</small></div><div class="features"><div><span>✓</span> Up to 15 Mbps</div><div><span>✓</span> Local support</div></div><a class="btn btn-dark plan-link" data-plan="Starter — 15 Mbps — ৳500/month" href="#connect">Choose plan →</a></article>
+      <article class="plan"><div class="block" style="background:#2786ee"></div><h3>Basic</h3><div class="plan-speed">25 Mbps</div><div class="price">৳ 600 <small>/month</small></div><div class="features"><div><span>✓</span> Up to 25 Mbps</div><div><span>✓</span> Local support</div></div><a class="btn btn-dark plan-link" data-plan="Basic — 25 Mbps — ৳600/month" href="#connect">Choose plan →</a></article>
+      <article class="plan featured"><div class="block" style="background:#f3bd25"></div><h3>Standard</h3><div class="plan-speed">35 Mbps</div><div class="price">৳ 700 <small>/month</small></div><div class="features"><div><span>✓</span> Up to 35 Mbps</div><div><span>✓</span> Local support</div></div><a class="btn btn-dark plan-link" data-plan="Standard — 35 Mbps — ৳700/month" href="#connect">Choose plan →</a></article>
+      <article class="plan"><div class="block" style="background:#ee3838"></div><h3>Plus</h3><div class="plan-speed">50 Mbps</div><div class="price">৳ 800 <small>/month</small></div><div class="features"><div><span>✓</span> Up to 50 Mbps</div><div><span>✓</span> Local support</div></div><a class="btn btn-dark plan-link" data-plan="Plus — 50 Mbps — ৳800/month" href="#connect">Choose plan →</a></article>
+      <article class="plan"><div class="block" style="background:#8b5cf6"></div><h3>Pro</h3><div class="plan-speed">70 Mbps</div><div class="price">৳ 900 <small>/month</small></div><div class="features"><div><span>✓</span> Up to 70 Mbps</div><div><span>✓</span> Local support</div></div><a class="btn btn-dark plan-link" data-plan="Pro — 70 Mbps — ৳900/month" href="#connect">Choose plan →</a></article>
+      <article class="plan"><div class="block" style="background:#15a878"></div><h3>Ultra</h3><div class="plan-speed">100 Mbps</div><div class="price">৳ 1,000 <small>/month</small></div><div class="features"><div><span>✓</span> Up to 100 Mbps</div><div><span>✓</span> Local support</div></div><a class="btn btn-dark plan-link" data-plan="Ultra — 100 Mbps — ৳1000/month" href="#connect">Choose plan →</a></article>
+    </div>
+    <p class="notice">*Please confirm package terms and speeds before publishing. Router/setup fees and fair-use conditions, if any, should be stated clearly.</p>
+  </section>
+
+  <section class="split" id="coverage">
+    <div class="panel dark">
+      <div class="eyebrow"><i class="sq"></i> Coverage area</div>
+      <h2>We’re here in<br>Hathazari.</h2>
+      <p>Our stated service area runs from Quaish to Madunaghat in Hathazari, Chittagong. Please contact us to confirm coverage at your exact address.</p>
+      <div class="route"><span>QUAISH</span><div class="route-line"></div><span>MADUNAGHAT</span></div>
+    </div>
+    <div class="panel" id="connect">
+      <div class="eyebrow"><i class="sq"></i> Apply for new connection</div>
+      <h2>Get connected<br>today.</h2>
+      <p>Fill in the details and send your request to our team through WhatsApp.</p>
+      <form id="connectionForm">
+        <input id="fullName" name="name" placeholder="Full name *" required>
+        <input id="phone" name="phone" type="tel" placeholder="Mobile number *" required>
+        <input class="full" id="address" name="address" placeholder="Address / area *" required>
+        <select class="full" id="package" name="package" required>
+          <option value="">Select a package *</option><option>Starter — 15 Mbps — ৳500/month</option><option>Basic — 25 Mbps — ৳600/month</option><option>Standard — 35 Mbps — ৳700/month</option><option>Plus — 50 Mbps — ৳800/month</option><option>Pro — 70 Mbps — ৳900/month</option><option>Ultra — 100 Mbps — ৳1000/month</option>
+        </select>
+        <textarea id="message" name="message" placeholder="Extra details (optional)"></textarea>
+        <button class="btn btn-dark full" type="submit">Send request on WhatsApp →</button>
+      </form>
+      <p class="notice">Your form opens WhatsApp with the details you entered. It does not save data on this website.</p>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="why">
+      <div><div class="eyebrow"><i class="sq"></i> Why Excellence</div><h2 style="font-size:28px;margin:12px 0">More than just<br>internet.</h2></div>
+      <div class="whyitem"><b>↯ Speed that fits</b><span>Options for home and business</span></div>
+      <div class="whyitem"><b>◉ Local service</b><span>Hathazari area coverage</span></div>
+      <div class="whyitem"><b>⌂ Customer care</b><span>Contact our team for support</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footerinner">
+    <div><div class="footbrand">Excellence<span style="color:var(--green)">.</span></div><p>Fast internet. A better tomorrow.</p></div>
+    <div><h4>Contact us</h4><p id="contactDetails">WhatsApp: +880 1783-578871<br>Phone: +880 1783-578871<br>Hathazari, Chittagong</p></div>
+    <div><h4>Quick links</h4><p><a href="#packages">→ Packages</a><br><a href="#coverage">→ Coverage area</a><br><a href="#connect">→ New connection</a><br><a href="#support">→ Support</a></p></div>
+    <div><h4>Service area</h4><p>Quaish → Madunaghat<br>Hathazari, Chittagong<br>Bangladesh</p></div>
+  </div>
+  <div class="copyright"><span>© <span id="year"></span> Excellence. All rights reserved.</span><span>Excellence Dot Net</span></div>
+</footer>
+
+<script>
+  // Company WhatsApp number, country code included; digits only.
+  const WHATSAPP_NUMBER = "8801783578871";
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("whatsappTop").href = "https://wa.me/" + WHATSAPP_NUMBER;
+  document.querySelectorAll(".plan-link").forEach(link => link.addEventListener("click", () => {
+    const select = document.getElementById("package");
+    select.value = link.dataset.plan;
+  }));
+  document.getElementById("connectionForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    if (WHATSAPP_NUMBER.includes("X")) {
+      alert("Website setup needed: replace WHATSAPP_NUMBER in index.html with your real WhatsApp number, including country code.");
+      return;
+    }
+    const details = [
+      "New connection request — Excellence",
+      "Name: " + document.getElementById("fullName").value,
+      "Mobile: " + document.getElementById("phone").value,
+      "Address / area: " + document.getElementById("address").value,
+      "Package: " + document.getElementById("package").value,
+      "Extra details: " + (document.getElementById("message").value || "None")
+    ].join("\n");
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(details), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
